@@ -61,8 +61,13 @@ vim.opt.cpoptions =  "aABceFsJ"
 -- ft.text = "#%s"
 
 -- listen to godot if using
-local projectfile = vim.fn.getcwd() .. "/project.godot"
-if projectfile then
-	vim.fn.serverstart "./godothost"
-	vim.lsp.enable("gdscript")
-end
+--local projectfile = vim.fn.getcwd() .. "/project.godot"
+--if projectfile then
+--	vim.fn.serverstart "./godothost"
+--	vim.lsp.enable("gdscript")
+--end
+
+
+
+
+

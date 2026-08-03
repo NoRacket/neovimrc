@@ -42,6 +42,15 @@ return {
 		vim.lsp.config("gdscript", {
 			capabilities = capabilities
 		})
+		local godot_projectfile = vim.uv.cwd() .. "/project.godot"
+		local function file_exists(file)
+			stat = vim.uv.fs_stat(file)
+			return stat ~= nil and stat.type == "file"
+		end
+		if file_exists(godot_projectfile) then
+			vim.fn.serverstart "./godothost"
+			vim.lsp.enable("gdscript")
+		end
 
 	end
 }
