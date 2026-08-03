@@ -121,11 +121,11 @@ vim.keymap.set("i", "<C-u>", "<C-g>u<C-u>")
 --vim.keymap.set("n", "<C-w><C-s>", vim.cmd.vsplit)
 
 -- easier to configure neovim
-vim.keymap.set("n", "<leader>rpp", "<cmd>e ~/.config/nvim/lua/config/remap.lua<CR>")
-vim.keymap.set("n", "<leader>rpc", "<cmd>e ~/.config/nvim/lua/config/set.lua<CR>")
+vim.keymap.set("n", "<leader>rpp", "<cmd>e ~/.config/nvim/lua/config/keymaps.lua<CR>")
+vim.keymap.set("n", "<leader>rpc", "<cmd>e ~/.config/nvim/lua/config/options.lua<CR>")
 vim.keymap.set("n", "<leader>rps", "<cmd>e ~/.config/nvim/lua/plugins/snippets<CR>")
 vim.keymap.set("n", "<leader>rpS", "<cmd>e ~/.config/nvim/lua/plugins/luasnip.lua<CR>")
-vim.keymap.set("n", "<leader>rr", "<cmd>e ~/notes.md<CR>")
+--vim.keymap.set("n", "<leader>rr", "<cmd>e ~/notes.md<CR>")
 
 
 -- reload luasnip

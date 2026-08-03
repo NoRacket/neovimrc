@@ -39,6 +39,9 @@ return {
 		vim.lsp.config("jdtls", {
 			capabilities = capabilities
 		})
+		vim.lsp.config("gdscript", {
+			capabilities = capabilities
+		})
 
 	end
 }
