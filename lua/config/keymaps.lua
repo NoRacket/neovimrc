@@ -41,7 +41,7 @@ vim.keymap.set("v", "(", "c()<Esc>Pl%")
 vim.keymap.set("v", "[", "c[]<Esc>Pl%")
 vim.keymap.set("v", "{", "c{}<Esc>Pl%")
 
-vim.keymap.set("n", "<CR>", "<nop>")
+--vim.keymap.set("n", "<CR>", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>g", vim.lsp.buf.format)
@@ -101,9 +101,6 @@ vim.keymap.set("n", "<Esc>", vim.cmd.nohlsearch)
 -- vim.keymap.set("n", "<leader>bb", ":e <C-r>=expand('%:h')<CR>/")
 vim.keymap.set("n", "<leader>e", ":e <C-r>=expand('%:h')<CR>/")
 vim.keymap.set("n", "<C-^>", "<C-~>")
-
--- Expanding braces and newline inserting
-vim.keymap.set("i", "{<Cr>", "{<Cr>}<Esc>O")
 
 vim.keymap.set("n", "<leader>mm", "<cmd>make<CR>")
 vim.keymap.set("n", "<leader>mf", "<cmd>make %<CR>")
