@@ -36,10 +36,12 @@ vim.keymap.set({ "n", "v" }, "<leader>x", [["_x]])
 -- vim.keymap.set("n", "<C-c>", [["+yy]])
 -- vim.keymap.set("v", "<C-c>", [["+y]])
 
--- surround with Klammern
+-- surround with braces
 vim.keymap.set("v", "(", "c()<Esc>Pl%")
 vim.keymap.set("v", "[", "c[]<Esc>Pl%")
 vim.keymap.set("v", "{", "c{}<Esc>Pl%")
+
+vim.keymap.set("i", "{<CR>", "{<CR>}<Esc>O")
 
 --vim.keymap.set("n", "<CR>", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
@@ -138,15 +140,16 @@ vim.keymap.set("i", "kk", "k")
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "kj", "<Esc>")
 
--- vim.keymap.set("i", "<C-l>", "<right>")
--- vim.keymap.set("i", "<C-h>", "<left>")
--- vim.keymap.set("i", "<C-f>", "<right>")
--- vim.keymap.set("i", "<C-b>", "<left>")
--- vim.keymap.set("i", "<C-p>", "<up>")
--- vim.keymap.set("i", "<C-n>", "<down>")
---vim.keymap.set("n", "<C-CR>", "o<Esc>")
---vim.keymap.set("i", "<C-CR>", "<Esc>o")
 
+-- moving in command mode
+vim.keymap.set("c", "<C-f>", "<right>")
+vim.keymap.set("c", "<M-f>", "<C-right>")
+vim.keymap.set("c", "<M-b>", "<C-left>")
+vim.keymap.set("c", "<C-b>", "<left>")
+vim.keymap.set("c", "<C-n>", "<down>")
+vim.keymap.set("c", "<C-p>", "<up>")
+vim.keymap.set("c", "<C-a>", "<Home>")
+vim.keymap.set("c", "<C-e>", "<End>")
 
 -- open link in browser
 vim.keymap.set("n", "gx", [[:silent !open <C-r><C-a> && i3-msg workspace 1 <CR>]])
